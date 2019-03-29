@@ -1,7 +1,15 @@
+lazy val scala212 = "$scalaVersion$"
+lazy val scala213 = "2.13.0-M5"
+
 ThisBuild / organization := "$organization$"
-ThisBuild / scalaVersion := "$scalaVersion$"
+ThisBuild / scalaVersion := scala212
+ThisBuild / crossScalaVersions := Seq(scala212, scala213)
 
 ThisBuild / scalacOptions ++= ScalacOptions.basic
+ThisBuild / scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) match {
+  case Some((2, 12)) => ScalacOptions.forScala212
+  case _ => Seq()
+})
 ThisBuild / scalacOptions ++= ScalacOptions.forScalaJS
 
 lazy val root = (project in file(".")).
