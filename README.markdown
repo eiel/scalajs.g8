@@ -1,5 +1,11 @@
 A [Giter8][g8] template for Scala.js!
 
+# Usage
+
+```
+sbt new eiel/scalajs.g8
+```
+
 Template license
 ----------------
 Written in 2019 by Tomohiko Himura <eiel.hal@gmail.com>
