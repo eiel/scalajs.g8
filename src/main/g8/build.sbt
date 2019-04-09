@@ -1,5 +1,5 @@
 lazy val scala212 = "$scalaVersion$"
-lazy val scala213 = "2.13.0-M5"
+lazy val scala213 = "2.13.0-RC1"
 
 ThisBuild / organization := "$organization$"
 ThisBuild / scalaVersion := scala212
