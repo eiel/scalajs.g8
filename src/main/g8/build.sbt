@@ -1,5 +1,5 @@
 lazy val scala212 = "$scalaVersion$"
-lazy val scala213 = "2.13.0-RC2"
+lazy val scala213 = "2.13.1"
 
 ThisBuild / organization := "$organization$"
 ThisBuild / scalaVersion := scala212
@@ -10,7 +10,7 @@ ThisBuild / scalacOptions ++= (CrossVersion.partialVersion(scalaVersion.value) m
   case Some((2, 12)) => ScalacOptions.forScala212
   case _ => Seq()
 })
-ThisBuild / scalacOptions ++= ScalacOptions.forScalaJS
+// ThisBuild / scalacOptions ++= ScalacOptions.forScalaJS06
 
 lazy val root = (project in file(".")).
   enablePlugins(ScalaJSPlugin).
